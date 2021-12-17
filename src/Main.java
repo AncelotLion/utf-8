@@ -7,12 +7,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         copyFileUsingStream("src/fileutf8.txt", "UTF-8", "src/win1251.txt", "WINDOWS-1251");
-
     }
-
     private static void copyFileUsingStream(String source, String sourceEnc, String dest, String descEnc) throws IOException {
-
-
         Charset sEnc = Charset.forName(sourceEnc);
         Charset dEnc = Charset.forName(descEnc);
         Reader fis = new InputStreamReader(new FileInputStream(source), sEnc);
